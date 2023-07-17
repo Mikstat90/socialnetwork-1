@@ -5,7 +5,7 @@
 
 
 .dialogsItems {
-    padding: 20px;
+
 }
 
 .dialog a{
@@ -17,7 +17,7 @@ a.activeLink{
 }
 
 .messages {
-    padding: 20px;
+background-color: aliceblue;
 }
 
 .message {

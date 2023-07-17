@@ -1,18 +1,25 @@
 import React from 'react';
-import s from './MyPosts.module.css'
 import {Post} from "./Post/Post";
+import d from './MyPosts.module.css'
 
 export const MyPosts = () => {
+
+    let postData = [
+        {id: 1, message: 'Hi, how are you?', likesCount: 15},
+        {id: 2, message: 'It is my first post', likesCount: 20}
+    ]
+
     return (
-        <div>
-            My Posts
+        <div className={d.postsBlock}>
+            <h3>My Posts</h3>
             <div>
-                <textarea></textarea>
+                <div><textarea></textarea></div>
                 <button>Add post</button>
                 <button>Remove</button>
             </div>
-            <Post message={'Hi, how are you?'} likesCount={15}/>
-            <Post message={'It is my first post'} likesCount={20}/>
+            <div className={d.posts}>
+                <Post postData={postData}/>
+            </div>
         </div>
     );
 };
