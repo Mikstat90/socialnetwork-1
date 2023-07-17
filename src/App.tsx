@@ -8,6 +8,7 @@ import {BrowserRouter, Route} from "react-router-dom";
 import {Music} from "./components/Music/Music";
 import {News} from "./components/News/News";
 import {Settings} from "./components/Settings/Settings";
+import {Video} from "./components/Video/Video";
 
 export const App = () => {
     return (
@@ -21,6 +22,7 @@ export const App = () => {
                     <Route path={'/news'} component={News}/>
                     <Route path={'/music'} component={Music}/>
                     <Route path={'/settings'} component={Settings}/>
+                    <Route path={'/video'} component={Video}/>
                 </div>
             </div>
         </BrowserRouter>
