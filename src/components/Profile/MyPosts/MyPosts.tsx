@@ -18,7 +18,7 @@ export const MyPosts = (props: MyPostsType) => {
         <div className={d.postsBlock}>
             <h3>My Posts</h3>
             <div>
-                <div><textarea></textarea></div>
+                <div><input type="text"/></div>
                 <button>Add post</button>
                 <button>Remove</button>
             </div>

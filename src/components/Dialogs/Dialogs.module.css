@@ -8,16 +8,18 @@
 
 }
 
-.dialog a{
-text-decoration: none;
+.dialog a {
+    text-decoration: none;
 }
 
-a.activeLink{
-   color: darkred;
+a.activeLink {
+    color: darkred;
 }
 
 .messages {
-background-color: aliceblue;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .message {
