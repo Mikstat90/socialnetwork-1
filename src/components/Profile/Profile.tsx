@@ -15,7 +15,7 @@ type DataType = {
 
 export const Profile = (props: ProfileType) => {
     return (
-        <div className={s.content}>
+        <div className={s.profile}>
             <ProfileInfo/>
             <MyPosts postData={props.postData}/>
         </div>

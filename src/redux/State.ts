@@ -23,9 +23,10 @@ type MessagesPageType = {
     messagesData: MessagesDataType[]
 }
 
-type RootStateType = {
+export type RootStateType = {
     profilePage: ProfilePageType
     messagesPage: MessagesPageType
+    sidebar: any
 }
 
 export let state: RootStateType = {
@@ -49,4 +50,5 @@ export let state: RootStateType = {
             {id: 3, message: 'What happened?'},
         ]
     },
+    sidebar: {}
 }
