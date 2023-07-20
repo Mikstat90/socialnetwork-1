@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {App} from './App';
+import {state} from "./redux/State";
 
 let postData = [
     {id: 1, message: 'Hi, how are you?', likesCount: 15},
@@ -23,6 +24,7 @@ let messagesData = [
 ]
 
 ReactDOM.render(<App
+    // state={state}
     postData={postData}
     dialogsData={dialogsData}
     messagesData={messagesData}

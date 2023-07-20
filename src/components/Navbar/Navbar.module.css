@@ -3,6 +3,7 @@
     background-color: darkcyan;
     padding: 20px;
     border-radius: 15px;
+    opacity: .5;
 }
 
 .item a{
