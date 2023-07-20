@@ -3,25 +3,26 @@ import s from './Dialogs.module.css'
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Message} from "./Message/Message";
 
-export const Dialogs = () => {
+type DialogsType = {
+    dialogsData: DialogsDataType[]
+    messagesData: MessagesDataType[]
+}
 
-    let dialogsData = [
-        {id: 1, name: 'Geralt'},
-        {id: 2, name: 'Vesemir'},
-        {id: 3, name: 'Eskel'},
-        {id: 4, name: 'Lambert'},
-    ]
+type DialogsDataType = {
+    id: number
+    name: string
+}
 
-    let messagesData = [
-        {id: 1, message: 'Hi'},
-        {id: 2, message: 'How are you?'},
-        {id: 3, message: 'What happened?'},
-    ]
+type MessagesDataType = {
+    id: number
+    message: string
+}
 
+export const Dialogs = (props: DialogsType) => {
     return (
         <div className={s.dialogs}>
-            <DialogItem dialogsData={dialogsData}/>
-            <Message messagesData={messagesData}/>
+            <DialogItem dialogsData={props.dialogsData}/>
+            <Message messagesData={props.messagesData}/>
         </div>
     );
 };

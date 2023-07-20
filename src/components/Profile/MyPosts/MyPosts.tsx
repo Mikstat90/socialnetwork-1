@@ -2,14 +2,17 @@ import React from 'react';
 import {Post} from "./Post/Post";
 import s from './MyPosts.module.css'
 
-export const MyPosts = () => {
+type MyPostsType = {
+    postData: PostDataType[]
+}
 
-    let postData = [
-        {id: 1, message: 'Hi, how are you?', likesCount: 15},
-        {id: 2, message: 'It is my first post', likesCount: 20},
-        {id: 3, message: 'Where is the Kaer Morhen?', likesCount: 50}
-    ]
+type PostDataType = {
+    id: number
+    message: string
+    likesCount: number
+}
 
+export const MyPosts = (props: MyPostsType) => {
     return (
         <div className={s.myPosts}>
             <h3>My Posts</h3>
@@ -18,7 +21,7 @@ export const MyPosts = () => {
                 <button>Add post</button>
                 <button>Remove</button>
             </div>
-            <Post postData={postData}/>
+            <Post postData={props.postData}/>
         </div>
     );
 };

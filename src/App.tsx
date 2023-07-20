@@ -10,15 +10,37 @@ import {Settings} from "./components/Settings/Settings";
 import {Video} from "./components/Video/Video";
 import {BrowserRouter, Route} from "react-router-dom";
 
-export const App = () => {
+type AppType = {
+    postData: PostDataType[]
+    dialogsData: DialogsDataType[]
+    messagesData: MessagesDataType[]
+}
+
+type PostDataType = {
+    id: number
+    message: string
+    likesCount: number
+}
+
+type DialogsDataType = {
+    id: number
+    name: string
+}
+
+type MessagesDataType = {
+    id: number
+    message: string
+}
+
+export const App = (props: AppType) => {
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path={'/profile'} render={() => <Profile/>}/>
-                    <Route path={'/dialogs'} render={() => <Dialogs/>}/>
+                    <Route path={'/profile'} render={() => <Profile postData={props.postData}/>}/>
+                    <Route path={'/dialogs'} render={() => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/>}/>
                     <Route path={'/news'} component={News}/>
                     <Route path={'/music'} component={Music}/>
                     <Route path={'/settings'} component={Settings}/>
