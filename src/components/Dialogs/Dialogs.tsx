@@ -21,12 +21,8 @@ type MessagesDataType = {
 export const Dialogs = (props: DialogsType) => {
     return (
         <div className={s.dialogs}>
-            <div className={s.dialogsItems}>
-                <DialogItem dialogsData={props.dialogsData}/>
-            </div>
-            <div className={s.messages}>
-                <Message messagesData={props.messagesData}/>
-            </div>
+            <DialogItem dialogsData={props.dialogsData}/>
+            <Message messagesData={props.messagesData}/>
         </div>
     );
 };

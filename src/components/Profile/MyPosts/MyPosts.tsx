@@ -13,18 +13,15 @@ type PostDataType = {
 }
 
 export const MyPosts = (props: MyPostsType) => {
-
     return (
-        <div className={s.postsBlock}>
+        <div className={s.myPosts}>
             <h3>My Posts</h3>
             <div>
                 <div><input type="text"/></div>
                 <button>Add post</button>
                 <button>Remove</button>
             </div>
-            <div className={s.posts}>
-                <Post postData={props.postData}/>
-            </div>
+            <Post postData={props.postData}/>
         </div>
     );
 };

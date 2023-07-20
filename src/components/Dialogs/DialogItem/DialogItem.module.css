@@ -1,9 +1,8 @@
-.dialogs {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+.dialogItem {
+
 }
 
-.dialog a {
+.dialogItem a {
     text-decoration: none;
 }
 
@@ -11,7 +10,7 @@ a.activeLink {
     color: darkred;
 }
 
-.img {
+.dialogItem img {
     width: 50px;
     border-radius: 25px;
 }

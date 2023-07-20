@@ -1,5 +1,6 @@
 import React from 'react';
-import s from "../Dialogs.module.css";
+import s from './Message.module.css'
+
 
 type MessageType = {
     messagesData: DataType[]
@@ -13,8 +14,8 @@ type DataType = {
 
 export const Message = (props: MessageType) => {
     return (
-        <div>
-            {props.messagesData.map(el => <div className={s.message}>{el.message}</div>)}
+        <div className={s.message}>
+            {props.messagesData.map(el => <div>{el.message}</div>)}
         </div>
     );
 };

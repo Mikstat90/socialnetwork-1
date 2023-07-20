@@ -1,27 +1,4 @@
 .dialogs {
-     display: grid;
-     grid-template-columns: 2fr 10fr;
- }
-
-
-.dialogsItems {
-
-}
-
-.dialog a {
-    text-decoration: none;
-}
-
-a.activeLink {
-    color: darkred;
-}
-
-.messages {
-    background-color: aliceblue;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-.message {
-
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }

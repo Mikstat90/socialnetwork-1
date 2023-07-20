@@ -13,7 +13,7 @@ type DataType = {
 
 export const Post = (props: PostType) => {
     return (
-        <div className={s.item}>
+        <div className={s.post}>
             {props.postData.map((el) => {
                 return (
                     <div>
