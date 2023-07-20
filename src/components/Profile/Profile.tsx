@@ -3,21 +3,11 @@ import s from './Profile.module.css'
 import {MyPosts} from "./MyPosts/MyPosts";
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
 
-type ProfileType = {
-    postData: DataType[]
-}
-
-type DataType = {
-    id: number
-    message: string
-    likesCount: number
-}
-
-export const Profile = (props: ProfileType) => {
+export const Profile = () => {
     return (
         <div className={s.profile}>
             <ProfileInfo/>
-            <MyPosts postData={props.postData}/>
+            <MyPosts/>
         </div>
     );
 };

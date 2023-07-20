@@ -1,21 +1,19 @@
 import React from 'react';
 import s from './Message.module.css'
 
-
 type MessageType = {
-    messagesData: DataType[]
+    messagesData: MessagesDataType[]
 }
 
-type DataType = {
+type MessagesDataType = {
     id: number
     message: string
 }
 
-
 export const Message = (props: MessageType) => {
     return (
         <div className={s.message}>
-            {props.messagesData.map(el => <div>{el.message}</div>)}
+            {props.messagesData.map((el,index) => <div key={index}>{el.message}</div>)}
         </div>
     );
 };

@@ -2,10 +2,10 @@ import React from 'react';
 import s from "./Post.module.css";
 
 type PostType = {
-    postData: DataType[]
+    postData: PostDataType[]
 }
 
-type DataType = {
+type PostDataType = {
     id: number
     message: string
     likesCount: number
@@ -14,9 +14,9 @@ type DataType = {
 export const Post = (props: PostType) => {
     return (
         <div className={s.post}>
-            {props.postData.map((el) => {
+            {props.postData.map((el,index) => {
                 return (
-                    <div>
+                    <div key={index}>
                         <img src="https://pbs.twimg.com/profile_images/1394990756717268994/_MiZSgHL_400x400.jpg"
                              alt="witcher-3"/>
                         {el.message}
