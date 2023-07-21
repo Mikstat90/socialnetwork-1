@@ -8,7 +8,7 @@ import {Music} from "./components/Music/Music";
 import {News} from "./components/News/News";
 import {Settings} from "./components/Settings/Settings";
 import {Video} from "./components/Video/Video";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 type AppType = {
     postData: PostDataType[]
@@ -34,7 +34,6 @@ type MessagesDataType = {
 
 export const App = (props: AppType) => {
     return (
-        <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
@@ -47,7 +46,6 @@ export const App = (props: AppType) => {
                     <Route path={'/video'} component={Video}/>
                 </div>
             </div>
-        </BrowserRouter>
     );
 }
 

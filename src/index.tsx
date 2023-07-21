@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {App} from './App';
 import {state} from "./redux/State";
+import {BrowserRouter} from "react-router-dom";
 
 let postData = [
     {id: 1, message: 'Hi, how are you?', likesCount: 15},
@@ -23,9 +24,11 @@ let messagesData = [
     {id: 3, message: 'What happened?'},
 ]
 
-ReactDOM.render(<App
-    // state={state}
-    postData={postData}
-    dialogsData={dialogsData}
-    messagesData={messagesData}
-/>,document.getElementById('root'));
+ReactDOM.render(<BrowserRouter>
+    <App
+        // state={state}
+        postData={postData}
+        dialogsData={dialogsData}
+        messagesData={messagesData}
+    />
+</BrowserRouter>, document.getElementById('root'));

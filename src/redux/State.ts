@@ -1,4 +1,34 @@
-export let state = {
+type MessagesDataType = {
+    id: number
+    message: string
+}
+
+type DialogsDataType = {
+    id: number
+    name: string
+}
+
+type PostDataType = {
+    id: number
+    message: string
+    likesCount: number
+}
+
+type ProfilePageType = {
+    postData: PostDataType[]
+}
+
+type DialogsPageType = {
+    dialogsData: DialogsDataType[]
+    messagesData: MessagesDataType[]
+}
+
+type StateType = {
+    profilePage: ProfilePageType
+    dialogsPage: DialogsPageType
+}
+
+export let state: StateType = {
     profilePage: {
         postData: [
             {id: 1, message: 'Hi, how are you?', likesCount: 15},
