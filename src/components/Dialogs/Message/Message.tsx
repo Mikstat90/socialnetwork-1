@@ -1,13 +1,9 @@
 import React from 'react';
 import s from './Message.module.css'
+import {MessagesDataType} from "../../../redux/State";
 
 type MessageType = {
     messagesData: MessagesDataType[]
-}
-
-type MessagesDataType = {
-    id: number
-    message: string
 }
 
 export const Message = (props: MessageType) => {

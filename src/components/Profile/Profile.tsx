@@ -2,15 +2,10 @@ import React from 'react';
 import s from './Profile.module.css'
 import {MyPosts} from "./MyPosts/MyPosts";
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
+import {PostDataType} from "../../redux/State";
 
 type ProfileType = {
     postData: PostDataType[]
-}
-
-type PostDataType = {
-    id: number
-    message: string
-    likesCount: number
 }
 
 export const Profile = (props: ProfileType) => {

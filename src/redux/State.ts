@@ -1,29 +1,29 @@
-type MessagesDataType = {
+export type MessagesDataType = {
     id: number
     message: string
 }
 
-type DialogsDataType = {
+export type DialogsDataType = {
     id: number
     name: string
 }
 
-type PostDataType = {
+export type PostDataType = {
     id: number
     message: string
     likesCount: number
 }
 
-type ProfilePageType = {
+export type ProfilePageType = {
     postData: PostDataType[]
 }
 
-type DialogsPageType = {
+export type DialogsPageType = {
     dialogsData: DialogsDataType[]
     messagesData: MessagesDataType[]
 }
 
-type StateType = {
+export type StateType = {
     profilePage: ProfilePageType
     dialogsPage: DialogsPageType
 }
