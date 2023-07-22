@@ -8,13 +8,24 @@ type MyPostsType = {
 }
 
 export const MyPosts = (props: MyPostsType) => {
+
+    let newPostElement = React.createRef()
+
+    let addPost = () => {
+        let text = newPostElement.current.value
+        alert(text)
+    }
+
     return (
         <div className={s.myPosts}>
             <h3>My Posts</h3>
             <div>
-                <div><input type="text"/></div>
-                <button>Add post</button>
-                <button>Remove</button>
+                <div>
+                    <textarea ref={newPostElement}></textarea>
+                </div>
+                <div>
+                    <button onClick={addPost}>Add post</button>
+                </div>
             </div>
             <Post postData={props.postData}/>
         </div>
